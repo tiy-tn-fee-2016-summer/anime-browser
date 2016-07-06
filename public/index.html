@@ -18,26 +18,7 @@
 
         <div class="results-list">
           <div class="results-list__item">
-            <div class="result-row">
-              <div class="result-row__item">
-                <div class="result-frame">
-                  <img src="http://placecera.com/100/100" alt="" class="result-frame__pic">
-                </div>
-              </div>
-              <div class="result-row__item">
-                <div class="result-info">
-                  <h2 class="result-info__title">Madoka Magica</h2>
-                  <p class="result-info__summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum minima laborum hic. Repellat dolores minima, neque excepturi voluptatibus, minus tempore repellendus velit architecto voluptate sint distinctio laboriosam, quaerat officiis placeat.</p>
-                </div>
-              </div>
-              <div class="result-row__item result-row__item--no-shrink">
-                <div class="result-stats">
-                  <h3 class="result-stats__item result-stats__item--type">TV</h3>
-                  <h3 class="result-stats__item result-stats__item--episodes">4</h3>
-                  <h3 class="result-stats__item result-stats__item--rating">TV - 14</h3>
-                </div>
-              </div>
-            </div>
+            <h2>Search for your favorite anime above...</h2>
           </div>
         </div>
       </div>
@@ -48,6 +29,10 @@
   <script src="/app.js" charset="utf-8"></script>
 
   <script type="text/javascript">
+    const app = document.querySelector('.app');
+    const start = require('index');
+
+    start(app);
   </script>
 </body>
 </html>

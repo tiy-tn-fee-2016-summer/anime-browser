@@ -44,7 +44,12 @@ section {
   margin-top: 0;
 
   &__item {
-    margin: 1rem;
+    padding: 1rem;
+    border-bottom: 1px black solid;
+
+    &:last-of-type {
+      border-bottom: 0;
+    }
   }
 }
 
@@ -52,8 +57,13 @@ section {
   display: flex;
   margin: -0.5rem;
 
+
   &__item {
     margin: 0.5rem;
+
+    &--expand {
+      flex-grow: 1;
+    }
 
     &--no-shrink {
       flex-shrink: 0;
