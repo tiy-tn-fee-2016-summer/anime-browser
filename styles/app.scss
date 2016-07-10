@@ -3,4 +3,13 @@
 
 // $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 // @import 'font-awesome';
+
+$gutter: 1rem;
+
 @import 'box-sizing';
+@import 'reset';
+
+@import 'search-bar';
+@import 'anime-results-grid';
+@import 'anime-result';
+@import 'anime-details';

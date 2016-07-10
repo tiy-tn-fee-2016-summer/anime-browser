@@ -6,11 +6,55 @@
   <link rel="stylesheet" href="/app.css">
 </head>
 <body>
+  <div class="app">
+    <div class="container">
+      <h1>Anime</h1>
+
+      <div class="search-bar">
+        <input type="text" class="search-bar__input" placeholder="Search...">
+        <button class="search-bar__btn">GO!</button>
+      </div>
+
+      <div class="anime-results-grid">
+        <div class="anime-results-grid__item">
+          <div class="anime-result">
+            <div class="anime-result__frame">
+              <img src="https://placecage.com/200/200" alt="" class="anime-result__pic">
+              <h2 class="anime-result__title">Pokemon</h2>
+            </div>
+
+            <div class="anime-result__popup">
+              <div class="anime-details">
+                <ul class="anime-details__genre-list">
+                  <li>Magic</li>
+                  <li>Magic</li>
+                  <li>Magic</li>
+                  <li>Magic</li>
+                </ul>
+
+                <p class="anime-details__synopsis">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod optio saepe, eveniet. Expedita, eum et veritatis ea consectetur porro sunt reiciendis, non aut doloribus enim error ducimus delectus nesciunt ex.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="/vendor.js" charset="utf-8"></script>
   <script src="/app.js" charset="utf-8"></script>
 
   <script type="text/javascript">
+    var grid = document.querySelector('.anime-results-grid');
+    var item = document.querySelector('.anime-results-grid__item');
+
+    for (var i = 0; i < 5; i++) {
+      var copy = item.cloneNode(true);
+      console.log(copy)
+      grid.insertBefore(copy, item);
+    }
   </script>
 </body>
 </html>

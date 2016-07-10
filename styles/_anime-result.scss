@@ -1,0 +1,49 @@
+.anime-result {
+  position: relative;
+
+  &__frame {
+
+  }
+  &__pic {
+    display: block;
+    width: 100%;
+  }
+
+  &__title {
+    position: absolute;
+    bottom: $gutter;
+    left: $gutter / 2;
+
+    margin: 0;
+
+    color: #fff;
+    text-shadow: 0.1rem 0.1rem 0.2rem #222;
+  }
+
+  &__popup {
+    display: none;
+    position: absolute;
+    top: 100%;
+    z-index: 1;
+    margin-top: $gutter;
+    padding: $gutter / 2;
+
+    background: #222;
+    color: #fff;
+
+    &--active {
+      display: block;
+    }
+
+    &::before {
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 1rem transparent solid;
+      border-bottom-color: #222;
+      border-top-width: 0;
+      content: '';
+    }
+  }
+}

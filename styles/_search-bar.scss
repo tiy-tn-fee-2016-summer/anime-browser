@@ -1,0 +1,17 @@
+.search-bar {
+  display: flex;
+  margin-bottom: $gutter;
+
+  &__input {
+    flex-grow: 1;
+    padding: $gutter / 2;
+
+    font-size: 1.2rem;
+  }
+
+  &__btn {
+    padding: $gutter / 2;
+
+    font-size: 1.2rem;
+  }
+}

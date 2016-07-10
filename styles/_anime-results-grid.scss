@@ -1,0 +1,10 @@
+.anime-results-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -$gutter;
+
+  &__item {
+    width: calc(100% / 4 - #{$gutter} - #{$gutter});
+    margin: $gutter;
+  }
+}

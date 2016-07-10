@@ -1,0 +1,11 @@
+.anime-details {
+  &__genre-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -($gutter / 4);
+
+    & li {
+      margin: ($gutter / 4);
+    }
+  }
+}
