@@ -47,14 +47,10 @@
   <script src="/app.js" charset="utf-8"></script>
 
   <script type="text/javascript">
-    var grid = document.querySelector('.anime-results-grid');
-    var item = document.querySelector('.anime-results-grid__item');
+    var appElement = document.querySelector('.app');
+    var startApplication = require('index');
 
-    for (var i = 0; i < 5; i++) {
-      var copy = item.cloneNode(true);
-      console.log(copy)
-      grid.insertBefore(copy, item);
-    }
+    startApplication(appElement);
   </script>
 </body>
 </html>
