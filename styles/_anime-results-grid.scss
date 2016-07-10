@@ -4,7 +4,9 @@
   margin: -$gutter;
 
   &__item {
-    width: calc(100% / 4 - #{$gutter} - #{$gutter});
+    width: calc(100% / 3 - #{$gutter} - #{$gutter});
+    min-width: 15rem;
+    flex-grow: 1;
     margin: $gutter;
   }
 
