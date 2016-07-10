@@ -2,8 +2,10 @@
   position: relative;
 
   &__frame {
-
+    transition: opacity 400ms ease-in;
+    opacity: 0;
   }
+
   &__pic {
     display: block;
     width: 100%;

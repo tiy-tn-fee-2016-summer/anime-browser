@@ -56,6 +56,16 @@ export default class AnimeResult {
     this.elements.title.innerText = this.data.title;
     this.elements.synopsis.innerText = this.data.synopsis;
 
-    // this.elements.genreList
+    for (let i = 0; i < this.data.genres.length; i++) {
+      const genreName = this.data.genres[i].name;
+      const genreEl = document.createElement('li');
+      genreEl.innerText = genreName;
+
+      this.elements.genreList.appendChild(genreEl);
+    }
+
+    window.setTimeout(() => {
+      this.elements.frame.style.opacity = '1';
+    }, 400);
   }
 }
