@@ -12,6 +12,7 @@ export default class AnimeResult {
 
       <div class="anime-result__popup">
         <div class="anime-details">
+          <button class="anime-details__close">X</button>
           <ul class="anime-details__genre-list"></ul>
           <p class="anime-details__synopsis"></p>
         </div>
@@ -19,13 +20,35 @@ export default class AnimeResult {
     </div>`;
 
     this.elements = {
+      frame: this.element.querySelector('.anime-result__frame'),
       pic: this.element.querySelector('.anime-result__pic'),
       title: this.element.querySelector('.anime-result__title'),
+      popup: this.element.querySelector('.anime-result__popup'),
+      closeBtn: this.element.querySelector('.anime-details__close'),
       genreList: this.element.querySelector('.anime-details__genre-list'),
       synopsis: this.element.querySelector('.anime-details__synopsis'),
     };
 
     this.data = showData;
+    this.setupEvents();
+  }
+
+  hidePopup() {
+    this.elements.popup.classList.remove('anime-result__popup--active');
+  }
+
+  showPopup() {
+    this.elements.popup.classList.add('anime-result__popup--active');
+  }
+
+  setupEvents() {
+    this.elements.frame.addEventListener('click', () => {
+      this.showPopup();
+    });
+
+    this.elements.closeBtn.addEventListener('click', () => {
+      this.hidePopup();
+    });
   }
 
   show() {
