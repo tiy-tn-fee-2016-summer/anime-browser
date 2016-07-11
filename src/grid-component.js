@@ -11,9 +11,9 @@ export default class GridComponent {
 
     // Loop through results
     for (let i = 0; i < data.length; i++) {
-      const show = data[i];
+      const anime = data[i];
       // Create a anime result component
-      const resultComponent = new AnimeResult(show);
+      const resultComponent = new AnimeResult(anime);
       resultComponent.show();
 
       this.element.appendChild(resultComponent.element);

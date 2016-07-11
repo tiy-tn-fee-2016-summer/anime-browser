@@ -1,4 +1,19 @@
 .anime-details {
+  &__close {
+    margin: 0;
+    padding: 0;
+    float: right;
+    border: 0;
+    outline: none;
+
+    background: none;
+
+    color: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
   &__genre-list {
     display: flex;
     flex-wrap: wrap;

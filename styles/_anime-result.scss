@@ -3,6 +3,7 @@
 
   &__frame {
     transition: opacity 400ms ease-in;
+    cursor: pointer;
     opacity: 0;
   }
 
@@ -26,12 +27,13 @@
     display: none;
     position: absolute;
     top: 100%;
-    z-index: 1;
     margin-top: $gutter;
     padding: $gutter / 2;
 
     background: #222;
     color: #fff;
+
+    z-index: 1;
 
     &--active {
       display: block;

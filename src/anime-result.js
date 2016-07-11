@@ -1,5 +1,5 @@
 export default class AnimeResult {
-  constructor(showData) {
+  constructor(animeData) {
     // Setup an empty element
     this.element = document.createElement('div');
     this.element.classList.add('anime-results-grid__item');
@@ -29,7 +29,7 @@ export default class AnimeResult {
       synopsis: this.element.querySelector('.anime-details__synopsis'),
     };
 
-    this.data = showData;
+    this.data = animeData;
     this.setupEvents();
   }
 

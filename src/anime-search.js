@@ -20,6 +20,10 @@ export default class AnimeSearch {
   }
 
   loadData() {
+    // Fill in grid with Loading message
+    this.elements.grid.innerHTML =
+      '<h2 class="anime-results-grid__loading">Searching...</h2>';
+
     const currentSearchTerm = this.elements.searchInput.value;
     const url =
       `https://cors-anywhere.herokuapp.com/hummingbird.me/api/v1/search/anime?query=${currentSearchTerm}`;
@@ -36,10 +40,6 @@ export default class AnimeSearch {
     // Fill in grid with Loading message
     this.elements.grid.innerHTML =
       '<h2 class="anime-results-grid__loading">Please search above...</h2>';
-
-    // Fire load data at start for testing
-    this.elements.searchInput.value = 'Pokemon';
-    this.loadData();
 
     // Setup our btn to listen for a click event
     this.elements.searchBtn.addEventListener('click', () => {
